@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipe App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="add-recipe.html"></a>
+    <header>
+        <h1>Food Recipe App</h1>
+        <a href="add-recipe.html" class="add-recipe-btn">+ Add Recipe</a>
+        <div class="filter">
+            <label for="category">Filter by category:</label>
+            <select id="category" onchange="filterRecipes()">
+                <option value="all">All</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="non-vegetarian">Non-Vegetarian</option>
+                <option value="dessert">Dessert</option>
+            </select>
+        </div>
+    </header>
+
+    <section id="recipes">
+        <!-- Recipes will be dynamically injected here -->
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

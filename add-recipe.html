@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Recipe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Add a New Recipe</h1>
+    </header>
+
+    <form id="recipe-form">
+        <input type="text" id="recipe-name" placeholder="Recipe Name" required>
+        <input type="text" id="recipe-category" placeholder="Category (e.g. Vegetarian, Non-Vegetarian, Dessert)" required>
+        <textarea id="recipe-ingredients" placeholder="Ingredients" rows="5" required></textarea>
+        <textarea id="recipe-instructions" placeholder="Instructions" rows="5" required></textarea>
+        <input type="url" id="recipe-image" placeholder="Image URL" required>
+        <button type="submit">Submit Recipe</button>
+    </form>
+
+    <script>
+        document.getElementById('recipe-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const recipeName = document.getElementById('recipe-name').value;
+            const recipeCategory = document.getElementById('recipe-category').value;
+            const recipeIngredients = document.getElementById('recipe-ingredients').value;
+            const recipeInstructions = document.getElementById('recipe-instructions').value;
+            const recipeImage = document.getElementById('recipe-image').value;
+
+            // Handle form submission (this would typically involve saving to a database)
+            console.log({
+                name: recipeName,
+                category: recipeCategory,
+                ingredients: recipeIngredients,
+                instructions: recipeInstructions,
+                image: recipeImage
+            });
+
+            alert('Recipe submitted successfully!');
+        });
+    </script>
+</body>
+</html>
+ 
