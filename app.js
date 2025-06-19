@@ -45,10 +45,11 @@ function displayRecipes(filteredRecipes) {
         recipeCard.classList.add("recipe-card");
 
         recipeCard.innerHTML = `
-            <img src="${recipe.image}" alt="${recipe.name}">
+            <img src="${recipe.image}" alt="${recipe.name}"><div class="text">
             <h3><a href="${recipe.name.toLowerCase().replace(/ /g, '-')}.html">${recipe.name}</a></h3>
             <p>${recipe.description}</p>
-        `;
+        </div>
+            `;
         
         recipesContainer.appendChild(recipeCard);
     });
